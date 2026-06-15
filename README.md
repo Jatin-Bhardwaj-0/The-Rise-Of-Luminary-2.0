@@ -233,52 +233,79 @@ Player profiles live in `saves/` as human-readable JSON files. Each profile trac
 
 ### Team
 
-| | Name | Role |
-|:---:|:---|:---|
-| 👑 | **Ishan** | **Team Lead** — project architecture, initial codebase, game systems design |
-| 🛠️ | **Jishnu Kaushik** | **Developer** — feature engineering, UI overhauls, systems implementation |
-| 🎮 | **Yuvraj Chillar** | Team Member |
-| 🎮 | **Aditya Sain** | Team Member |
-| 🎮 | **Jatin Bhadwaj** | Team Member |
+|     | Name               | Role                                                                                                                          |
+| --- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| 🎨  | **Jatin Bhardwaj** | **Lead UI, UX & Gameplay Developer** — UI redesign, character systems, asset creation, interaction systems, gameplay presentation |
+| ⚙️  | **Ishan**          | **Core Systems Developer** — backend architecture, game framework, state management                                           |
+| 🛠️ | **Jishnu Kaushik** | **Gameplay Systems Developer** — TrainingState development, question integration, lesson systems                              |
+| 🔊  | **Yuvraj Chillar** | **Audio Resources** — sound assets and audio resources                                                                        |
+| 🎮  | **Aditya Sain**    | Team Member                                                                                                                   |
+
+---
+
+### Jatin Bhardwaj — Implemented Changes
+
+**🎨 UI & Visual Redesign**
+
+* Led the redesign and modernization of the game's visual presentation
+* Redesigned the battlefield interface, HUD layout, question panels, answer panels, and combat presentation
+* Improved visual consistency, readability, spacing, and overall user experience across multiple game states
+* Refined menu layouts and presentation throughout the project
+
+**🖱️ Mouse Interaction & Navigation Systems**
+
+* Integrated mouse-based navigation across game interfaces that previously relied primarily on keyboard navigation
+* Added hover detection, hover feedback, visual highlighting, and interactive UI behaviour
+* Improved usability and responsiveness throughout menus and gameplay interfaces
+* Converted multiple interfaces from keyboard-focused navigation to full mouse-supported interaction
+
+**🎭 Character Selection System**
+
+* Reworked and expanded the Character Selection System
+* Implemented character card rendering and card asset integration
+* Developed unlock systems and developer/demo mode functionality
+* Improved character presentation, selection flow, and user interaction
+
+**🖼️ Asset Creation & Integration**
+
+* Designed and produced visual assets used throughout the project
+* Designed and integrated custom character cards, battlefield artwork, UI assets, and visual themes used throughout the game
+* Integrated character cards, UI artwork, battlefield backgrounds, menu assets, and presentation graphics
+* Managed scaling, rendering, positioning, and asset pipeline implementation within the game
+
+**⚔️ Battlefield & Gameplay Presentation**
+
+* Redesigned combat UI presentation and HUD structure
+* Reworked health bar presentation, battlefield layout, answer interfaces, and combat feedback systems
+* Performed extensive iteration, testing, debugging, and visual improvements across gameplay systems
+
+**🔧 Project Integration & Maintenance**
+
+* Coordinated integration of visual systems with existing backend functionality
+* Performed debugging, balancing, compatibility fixes, and gameplay polish
+* Managed GitHub repository setup, version control, and project maintenance
 
 ---
 
 ### Jishnu Kaushik — Implemented Changes
 
-<details>
-<summary><b>Full breakdown of features built by Jishnu Kaushik</b></summary>
+* Development and expansion of TrainingState systems
+* Question loading, processing, and educational content integration
+* Lesson viewer functionality and training workflow implementation
+* Supporting gameplay systems related to educational progression
+* Training-related gameplay features and system integration
 
-<br/>
+---
 
-**⚔️ Training State Overhaul**
-- Complete rewrite and expansion of `TrainingState.cpp` (550+ insertions) — restructured the core battle loop, question flow, and entire UI rendering pipeline
-- Reorganised `TrainingState.hpp` — cleaned up member variables, added new UI element declarations for improved scalability
+### Ishan — Implemented Changes
 
-**🖥️ Battle HUD Layout System**
-- Replaced 110+ hardcoded pixel positions with a centralised `Layout` namespace of named constants
-- Covers every HUD component — player panel, enemy panel, score, question box, answer grid, feedback strip, mastery bar, bottom nav
-- Layout tuning is now a single-location change instead of hunting through raw coordinates
+* Initial project architecture
+* Core backend systems
+* State management framework
+* Fundamental gameplay infrastructure
+* Base game systems and engine foundation
 
-**🔘 Button Class Upgrade**
-- Designed and implemented a full state machine inside `Button` — pressed, disabled, hover, and idle states with clean transitions
-- Added smooth **colour interpolation** between states for a polished, animated feel
-- Enhanced callback system and input handling reliability
 
-**🎭 Character Selection UI Revamp**
-- Replaced static background with a scaled dynamic background (`characterselect.png`)
-- Rebuilt character card rendering — textures, sprites, and outline boxes built dynamically in `updateDisplay()`
-- Improved memory safety: vectors properly cleared, textures and sprites correctly owned and deleted
-- Fixed nav-key input (highlight colours update correctly), removed broken numeric shortcuts
-
-**🏛️ Training Hub & Lesson Viewer States**
-- Built `TrainingHubState` from scratch — the chapter/lesson selection screen between the menu and combat
-- Built `LessonViewerState` from scratch (260 lines) — full in-game lesson viewer with its own rendering pipeline and input handling
-- Wired both into `Game.cpp` / `Game.hpp` — state transitions, lifecycle methods, and CMakeLists.txt build integration
-
-**🧹 Codebase Cleanup & Documentation**
-- Removed stale test data (`sample_questions.json`) superseded by the 24 real question files
-- Tightened `.gitignore` — backup patterns scoped to `src/`, sample file explicitly excluded
-- Authored the project `README.md` and clarified `CLAUDE.md` (removed outdated blocker note on question filtering)
 
 </details>
 
