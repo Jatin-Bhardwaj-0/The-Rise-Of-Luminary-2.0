@@ -229,18 +229,6 @@ Player profiles live in `saves/` as human-readable JSON files. Each profile trac
 
 ---
 
-## 👥 Credits
-
-### Team
-
-|     | Name               | Role                                                                                                                          |
-| --- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| 🎨  | **Jatin Bhardwaj** | **Lead UI, UX & Gameplay Developer** — UI redesign, character systems, asset creation, interaction systems, gameplay presentation |
-| ⚙️  | **Ishan**          | **Core Systems Developer** — backend architecture, game framework, state management                                           |
-| 🛠️ | **Jishnu Kaushik** | **Gameplay Systems Developer** — TrainingState development, question integration, lesson systems                              |
-| 🔊  | **Yuvraj Chillar** | **Audio Resources** — sound assets and audio resources                                                                        |
-| 🎮  | **Aditya Sain**    | Team Member                                                                                                                   |
-
 ---
 
 ### Jatin Bhardwaj — Implemented Changes
